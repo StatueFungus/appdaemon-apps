@@ -1,0 +1,15 @@
+appdaemon:
+  latitude: 0
+  longitude: 0
+  elevation: 30
+  time_zone: Europe/Berlin
+  plugins:
+    HASS:
+      type: hass
+      ha_url: http://192.168.178.31:8123
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJkNWJhYmRiOTk3MGE0MTgzYWM5YTQ1OWQ0MDY4ODk5ZSIsImlhdCI6MTY2NDYxMTcxOCwiZXhwIjoxOTc5OTcxNzE4fQ.kDgMxFeV-OtXp1_6HnqUv5eiuSaG2Qwwr9mXe2WvyBQ
+http:
+  url: "http://homeassistant:5050"
+admin:
+api:
+hadashboard:

@@ -1,0 +1,25 @@
+---
+ench:
+  module: ench
+  class: EnCh
+  log_level: DEBUG
+  notify: "notify.bene"
+  exclude: 
+    - "device_tracker.judiths_iphone"
+    - "sensor.judiths_iphone_battery_level"
+    - "sensor.benes_handy_battery_level"
+    - "sensor.tankerkoenig*"
+    - "*_valve_detection"
+    - "sensor.benes_handy_next_alarm"
+    - "sensor.octoprint*"
+    - "binary_sensor.octoprint*"
+    - "input_datetime.next_alarm_judith"
+    - "button.octoprint_*"
+    - "sensor.valetudo_rockrobo_error_description"
+    - "scene.*"
+  battery:
+    interval_min: 360
+    min_level: 20
+  unavailable:
+    interval_min: 60
+    max_unavailable_min: 15

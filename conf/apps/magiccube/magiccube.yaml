@@ -1,0 +1,46 @@
+magiccube_arbeitszimmer:
+  module: magiccube
+  class: MagicCube
+  entity_id: "sensor.magiccube_arbeitszimmer_action"
+  actions:
+    slide: 
+      - action: "toggle"
+        entity: "light.bene_schreibtisch"
+    rotate_left:
+      - action: "cycle_scene"
+        scene_selection: "input_select.arbeitszimmer_szenenwahl"
+        scene_cycle: "previous"
+    rotate_right:
+      - action: "cycle_scene"
+        scene_selection: "input_select.arbeitszimmer_szenenwahl"
+        scene_cycle: "next"
+#    flip90:
+#      - action: "call_service"
+#        service: "light/turn_on"
+#        service_args: 
+#          entity_id: "light.bene_schreibtisch"
+
+magiccube_schlafzimmer:
+  module: magiccube
+  class: MagicCube
+  entity_id: "sensor.magiccube_schlafzimmer_action"
+  actions:
+    slide: 
+      - action: "toggle"
+        entity: "light.lampe_schlafzimmer"
+    rotate_left:
+      - action: "cycle_scene"
+        scene_selection: "input_select.schlafzimmer_szenenwahl"
+        scene_cycle: "previous"
+    rotate_right:
+      - action: "cycle_scene"
+        scene_selection: "input_select.schlafzimmer_szenenwahl"
+        scene_cycle: "next"
+    flip180:
+      - action: "turn_off"
+        entity: "light.hue_go"
+      - action: "turn_off"
+        entity: "light.lampe_schlafzimmer"
+      - action: "turn_off"
+        entity: "switch.steckdose_schlafzimmer"
+    
